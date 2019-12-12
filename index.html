@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rekrutacja1</title>
+  <link rel="stylesheet" href="css/rek-reset.css">
+  <link rel="stylesheet" href="css/rek.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-    
+
+  <div id="wrapper">
+    <header>
+      <div id="tabbed-content">
+        <span class="tabs" id="comment-tab" onclick="tabToComent()">Comments</span>
+        <span class="tabs" id="todo-tab" onclick="tabToList()">To do list</span>
+      </div>
+      <div id="search">
+        <div id="checkboxes">
+          <div class="checkbox">
+            <input type="checkbox" name="resolved"> &nbsp Show resolved
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="current"> &nbsp Current page only
+          </div>
+        </div>
+        <form id="search-input">
+          <input type="text"></input>
+        </form>
+        <div id="icon"><i class="fas fa-search" onclick="tabSearching()"></i></div>
+      </div>
+    </header>
+
+    <main>
+      <div id="comments" class="content">
+        <div class="comment">
+          <img src="http://placeimg.com/28/28/people" alt="">
+          <p><b>Kamil Zięba: </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, dignissimos.</p>
+          <i class="fas fa-angle-down"></i>
+          <div id="second-row">
+           <i class="far fa-heart fa-0.5x"></i>
+           <ul>
+            <li>Replay</li>
+            <li>Mark as resolved</li>
+           </ul>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="http://placeimg.com/28/28/people" alt="">
+          <p><b>Kamil Zięba: </b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <i class="fas fa-angle-down"></i>
+          <div id="second-row">
+           <i class="far fa-heart fa-0.5x"></i>
+           <ul>
+            <li onclick="showAdder">Replay</li>
+            <li>Mark as resolved</li>
+           </ul>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="http://placeimg.com/28/28/people" alt="">
+          <p><b>Kamil Zięba: </b>Trzeba naprawić tłumik i wymienić przednią i tylnią ośkę. Po rozkręcenie zajrzymy czy wszystko z amortyzatorami jest ok.</p>
+          <i class="fas fa-angle-down"></i>
+          <div id="second-row">
+           <i class="far fa-heart fa-0.5x"></i>
+           <ul>
+            <li>Replay</li>
+            <li>Mark as resolved</li>
+           </ul>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="http://placeimg.com/28/28/people" alt="">
+          <p><b>Kamil Zięba: </b>Po wrzuceniu bananów, jajek do mleka kokosowego należy zmiksowaś wszystko blenderem lub rozbełtać widelcem. Smarzymy na patelni z obu stron do zarumienienia.</p>
+          <i class="fas fa-angle-down"></i>
+          <div id="second-row">
+           <i class="far fa-heart fa-0.5x"></i>
+           <ul>
+            <li>Replay</li>
+            <li>Mark as resolved</li>
+           </ul>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="http://placeimg.com/28/28/people" alt="">
+          <p><b>Kamil Zięba: </b>Chiny zaczęły masową produkcję procesorów.</p>
+          <i class="fas fa-angle-down"></i>
+          <div id="second-row">
+           <i class="far fa-heart fa-0.5x"></i>
+           <ul>
+            <li>Replay</li>
+            <li>Mark as resolved</li>
+           </ul>
+          </div>
+        </div>
+        <form id="message-adder">
+          <textarea name="message" rows="5" cols="30"></textarea>
+          <input type="button" id="adding" value="Add New Message">
+        </form>
+      </div>
+      <div id="todo-list" class="content">
+        <form id="todo-tab">
+          <input type="text" id="note" placeholder="Add note..">
+          <button id="button">Add</button>
+        </form>
+        <ul>
+          <li>
+            <span  class="name">Zakupy</span>
+            <span class="makeDone">@</span>
+            <span class="delete">&times</span>
+          </li>
+          <li>
+            <span class="name done">Przesłać pliki</span>
+            <span class="makeDone">@</span>
+            <span class="delete">&times</span>
+          </li>
+          <li>
+            <span  class="name">Odpisać szefowi</span>
+            <span class="makeDone">@</span>
+            <span class="delete">&times</span>
+          </li>
+          <li>
+            <span class="name">Projekt dla Tomka</span>
+            <span class="makeDone">@</span>
+            <span class="delete">&times</span>
+          </li>
+        </ul>
+      </div>
+      <div id="bottom">
+        <div id="buttons-holder">
+          <span class="button" id="button1" onclick="showAdder()">Add Comment</span>
+          <span class="button" id="button2">Resolve All Comments</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+<script src="rek.js"></script>
+
 </body>
 </html>

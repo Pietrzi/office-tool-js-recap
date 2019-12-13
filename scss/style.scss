@@ -1,0 +1,283 @@
+@import "rek-reset.scss";
+@import "variables.scss";
+
+#tabbed-content {
+  display: flex;
+  .tabs {
+    height: 35px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: darken($gray, 50)
+  }
+  #comment-tab {
+   background-color: lightgray;
+    &:hover {
+      background-color: lighten($gray, 5);
+    }
+  }
+  #todo-tab {
+    &:hover {
+      background-color: lighten($gray, 5);
+    }
+  }
+}
+  #search {
+    width: 100%;
+    height: 35px;
+    position: relative;
+    border-bottom: solid 1px lighten($gray, 10);
+    color: darken($gray, 30);
+    #checkboxes {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      left: 0;
+      .checkbox {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+      }
+    }
+    #search-input {
+      display: none;
+      height: 100%;
+      width: 90%;
+      position: absolute;
+      left: 0;
+      input {
+        margin: 4px 8px;
+        width: 250px;
+        height: 25px;
+        font-size: 13px;
+        border-radius: 1px;
+      }
+    }
+    #icon {
+      height: 100%;
+      width: 10%;
+      position: absolute;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: darken($gray, 20);
+      cursor: pointer;
+      &:hover {
+        color: lighten($blue, 30);
+      }
+    }
+  }
+#comments {
+
+ .comment  {
+   width: 270px;
+   height: auto;
+   margin: 5px auto;
+   border: solid 1px lighten($gray, 10);
+   border-radius: 2px;
+   display: grid;
+   grid-template-columns: 16% 76% 8%;
+   grid-template-rows: 1fr auto;
+   font-size: 13px;
+   p {
+     color: darken($gray, 40);
+     span {
+       color: darken($gray, 50);
+     }
+   }
+   img {
+     margin-left: 5px;
+     margin-top: 5px;
+     cursor: pointer;
+   }
+   i {
+     color: darken($gray, 30);
+     &:hover {
+       color: lighten($blue, 30);
+     }
+   }
+   #second-row {
+     margin: 5px 0;
+     font-size: 11px;
+     grid-column: 2 / span 1;
+     display: flex;
+     i {
+       margin-right: 10px;
+       cursor: pointer;
+       color: darken($gray, 30);
+       &:hover {
+         color: lighten($blue, 30);
+       }
+     }
+     ul  li {
+       display: inline;
+       margin: 1px 5px;
+       cursor: pointer;
+       color: darken($gray, 30);
+       &:hover {
+         color: lighten($blue, 30);
+       }
+     }
+   }
+ }
+ #message-adder {
+   display: none;
+   position: absolute;
+   bottom: 35px;
+   width: 100%;
+   height: auto;
+   margin-bottom: 5px;
+   text-align: center;
+   z-index: 5;
+   textarea {
+     width: 80%;
+     font-size: 13px;
+     height: 50px;
+   }
+   #adding {
+     padding: 5px 10px;
+     border-radius: 3px;
+     cursor: pointer;
+     background-color: lighten($blue, 5);
+     border: solid 1px lighten($blue, 5);
+     color: white;
+     &:hover {
+       background-color: darken($blue, 5);
+       border: solid 1px darken($blue, 5);
+     }
+ }
+ }
+}
+
+#todo-list {
+  display: none;
+  position: relative;
+  #todo-tab {
+    width: 100%;
+    height: 35px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 5px;
+    input {
+      margin: 5px 5px;
+      font-size: 13px;
+      border-radius: 2px;
+    }
+    #button {
+    background-color: lighten($blue, 5);
+    padding: 0 15px;
+    height: 70%;
+    margin: auto 5px;
+    color: white;
+    border: solid 1px lighten($blue, 5);
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($blue, 5);
+      border: solid 1px darken($blue, 5);
+    }
+    }
+  }
+ul {
+  list-style-type: none;
+  li {
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+    position: relative;
+    &:hover {
+      background-color: $gray;
+    }
+    .name {
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      text-decoration: none;
+      color: darken($gray, 40);
+    }
+    .makeDone {
+      position: absolute;
+      right: 28px;
+      top: 3px;
+      padding: 2px 5px;
+      background-color: lighten($blue, 5);
+      border: solid 1px lighten($blue, 5);
+      border-radius: 3px;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($blue, 5);
+        border: solid 1px darken($blue, 5);
+      }
+    }
+    .done {
+      text-decoration: line-through;
+    }
+    .delete {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      padding: 2px 5px;
+      background-color: lighten($blue, 5);
+      border: solid 1px lighten($blue, 5);
+      border-radius: 3px;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($blue, 5);
+        border: solid 1px darken($blue, 5);
+      }
+    }
+  }
+}
+}
+#bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 35px;
+  border-top: solid 1px lighten($gray, 10);
+  #buttons-holder{
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    .button {
+      font-size: 13px;
+      padding: 4px 14px;
+      border: solid 1px black;
+      border-radius: 3px;
+      height: 80%;
+      margin: auto 0;
+      cursor: pointer;
+    }
+    #button1 {
+      background-color: lighten($blue, 5);
+      border: solid 1px lighten($blue, 5);
+      color: white;
+      &:hover {
+        background-color: darken($blue, 5);
+        border: solid 1px darken($blue, 5);
+      }
+    }
+    #button2 {
+      background-color: darken($gray, 3);
+      border: solid 1px darken($gray, 3);
+      color: darken($gray, 40);
+      &:hover {
+        background-color: darken($gray, 15);
+        border: solid 1px darken($gray, 15);
+      }
+    }
+  }
+}

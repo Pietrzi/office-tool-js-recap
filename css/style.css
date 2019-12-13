@@ -1,0 +1,258 @@
+xbox;
+  display: flex; }
+  #tabbed-content .tabs {
+    height: 35px;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: #4d4d4d; }
+  #tabbed-content #comment-tab {
+    background-color: lightgray; }
+    #tabbed-content #comment-tab:hover {
+      background-color: #d9d9d9; }
+  #tabbed-content #todo-tab:hover {
+    background-color: #d9d9d9; }
+
+#search {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  border-bottom: solid 1px #e6e6e6;
+  color: gray; }
+  #search #checkboxes {
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 0; }
+    #search #checkboxes .checkbox {
+      width: 50%;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 13px; }
+  #search #search-input {
+    display: none;
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    left: 0; }
+    #search #search-input input {
+      margin: 4px 8px;
+      width: 250px;
+      height: 25px;
+      font-size: 13px;
+      border-radius: 1px; }
+  #search #icon {
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #999999;
+    cursor: pointer; }
+    #search #icon:hover {
+      color: #68a6e4; }
+
+#comments .comment {
+  width: 270px;
+  height: auto;
+  margin: 5px auto;
+  border: solid 1px #e6e6e6;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 16% 76% 8%;
+  grid-template-rows: 1fr auto;
+  font-size: 13px; }
+  #comments .comment p {
+    color: #666666; }
+    #comments .comment p span {
+      color: #4d4d4d; }
+  #comments .comment img {
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer; }
+  #comments .comment i {
+    color: gray; }
+    #comments .comment i:hover {
+      color: #68a6e4; }
+  #comments .comment #second-row {
+    margin: 5px 0;
+    font-size: 11px;
+    grid-column: 2 / span 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #comments .comment #second-row i {
+      margin-right: 10px;
+      cursor: pointer;
+      color: gray; }
+      #comments .comment #second-row i:hover {
+        color: #68a6e4; }
+    #comments .comment #second-row ul li {
+      display: inline;
+      margin: 1px 5px;
+      cursor: pointer;
+      color: gray; }
+      #comments .comment #second-row ul li:hover {
+        color: #68a6e4; }
+
+#comments #message-adder {
+  display: none;
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  text-align: center;
+  z-index: 5; }
+  #comments #message-adder textarea {
+    width: 80%;
+    font-size: 13px;
+    height: 50px; }
+  #comments #message-adder #adding {
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #1f66ae;
+    border: solid 1px #1f66ae;
+    color: white; }
+    #comments #message-adder #adding:hover {
+      background-color: #174c82;
+      border: solid 1px #174c82; }
+
+#todo-list {
+  display: none;
+  position: relative; }
+  #todo-list #todo-tab {
+    width: 100%;
+    height: 35px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 5px; }
+    #todo-list #todo-tab input {
+      margin: 5px 5px;
+      font-size: 13px;
+      border-radius: 2px; }
+    #todo-list #todo-tab #button {
+      background-color: #1f66ae;
+      padding: 0 15px;
+      height: 70%;
+      margin: auto 5px;
+      color: white;
+      border: solid 1px #1f66ae;
+      border-radius: 3px;
+      cursor: pointer; }
+      #todo-list #todo-tab #button:hover {
+        background-color: #174c82;
+        border: solid 1px #174c82; }
+  #todo-list ul {
+    list-style-type: none; }
+    #todo-list ul li {
+      width: 100%;
+      height: 30px;
+      margin: 5px 0;
+      position: relative; }
+      #todo-list ul li:hover {
+        background-color: #cccccc; }
+      #todo-list ul li .name {
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        text-decoration: none;
+        color: #666666; }
+      #todo-list ul li .makeDone {
+        position: absolute;
+        right: 28px;
+        top: 3px;
+        padding: 2px 5px;
+        background-color: #1f66ae;
+        border: solid 1px #1f66ae;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer; }
+        #todo-list ul li .makeDone:hover {
+          background-color: #174c82;
+          border: solid 1px #174c82; }
+      #todo-list ul li .done {
+        text-decoration: line-through; }
+      #todo-list ul li .delete {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        padding: 2px 5px;
+        background-color: #1f66ae;
+        border: solid 1px #1f66ae;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer; }
+        #todo-list ul li .delete:hover {
+          background-color: #174c82;
+          border: solid 1px #174c82; }
+
+#bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 35px;
+  border-top: solid 1px #e6e6e6; }
+  #bottom #buttons-holder {
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: start;
+    align-content: flex-start; }
+    #bottom #buttons-holder .button {
+      font-size: 13px;
+      padding: 4px 14px;
+      border: solid 1px black;
+      border-radius: 3px;
+      height: 80%;
+      margin: auto 0;
+      cursor: pointer; }
+    #bottom #buttons-holder #button1 {
+      background-color: #1f66ae;
+      border: solid 1px #1f66ae;
+      color: white; }
+      #bottom #buttons-holder #button1:hover {
+        background-color: #174c82;
+        border: solid 1px #174c82; }
+    #bottom #buttons-holder #button2 {
+      background-color: #c4c4c4;
+      border: solid 1px #c4c4c4;
+      color: #666666; }
+      #bottom #buttons-holder #button2:hover {
+        background-color: #a6a6a6;
+        border: solid 1px #a6a6a6; }

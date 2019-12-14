@@ -2,15 +2,20 @@
 @import './style.scss';
 
 * {
-    margin: 0 0;
-    padding: 0 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-  
-  body {
-    background-color: black; }
-  
-  #wrapper {
-    width: 350px;
-    height: 800px;
-    background-color: white; }
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+  body{
+    background-color: #fff;
+    #wrapper{
+      width: 300px;
+      height: 650px;
+      background-color: #fff;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.25);
+      position: relative;
+    }
+  }
+}
